@@ -8,7 +8,7 @@ class APIManager {
     getUsers() {
         // Generate 7 new Users
         let users = []
-        return $.get(`https://randomuser.me/api/?results=7`, function (res) {
+        $.get(`https://randomuser.me/api/?results=7`, function (res) {
             res.results.forEach(result =>
                 users.push({
                     name: `${result.name.title} ${result.name.first} ${result.name.last}`,
